@@ -5,29 +5,26 @@ using UnityEngine;
 public class PlayerBulletStandard : MonoBehaviour
 {
     private Rigidbody body;
-    private int lifeTime;
-    private int bulletPower;
+    private int power;
+    public float speed;
     public int mode;
-    public Vector3 dir;
+    public Vector3 vel;
 
     void Start()
     {
+        Destroy(gameObject, 1.5f);
         body = GetComponent<Rigidbody>();
-        dir = new Vector3 (0, 0, 60);
-        lifeTime = 75;
+        vel = new Vector3 (0, 0, 60);
     }
 
     void FixedUpdate()
     {
-        body.velocity = dir;
-        lifeTime--;
+        body.velocity = vel * speed;
+
     }
 
     void Update()
     {
-        if (lifeTime <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+        
     }
 }

@@ -112,5 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1f39cc817999b42829feac5f04deaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
   mode: 0
-  dir: {x: 0, y: 0, z: 0}
+  vel: {x: 0, y: 0, z: 0}
